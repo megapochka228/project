@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hobby {
+  width: 450px;
+  height: 450px;
+  background-size: cover;
+  padding-top: 350px;
+  margin-block-end: 75px;
+  font-size: 40;
+}
+
+.fishing {
+  background-image: url(https://static.mk.ru/upload/entities/2024/09/12/13/articlesImages/image/e6/00/7d/78/629c9c0641e297e5d939e32265ec77b8.jpg);
+
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+}
+.hobby h3 {
+  background-color: bisque;
+  width: 300px;
+  height: 75px;
+  margin: 0 auto;
+  padding: 3px;
+  font-size: 16px;
+}
+.programm {
+  background-image: url(https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2023/10/27/b3e0b817-4c10-49b6-aa56-30a19cbfa52f_a57dc0a9.jpg);
+}
+.game {
+  background-image: url(https://avatars.mds.yandex.net/i?id=9a1943e4a6d61b39666e88ac29df7b32_l-9181674-images-thumbs&n=13);
+}
+p {
+  width: 150px;
+  /* line-height: 100px; */
+  /* letter-spacing: -5px; */
+  /* word-spacing: 20px; */
+  text-transform: none;
+  text-decoration: line-through;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  /* transform: rotate(20deg) translate(500px, -200px) scale(); */
+  /* transition-property  transition-duration transition-timing-function transition-delay */
+  transform: scale(2);
+  /* transition: transform 2s ease 2s;
+  transition: transform 4s width 2s; */
+  transition: transform 4s;
+}
+
+.box:hover {
+  transform: scale(0.5);
+  width: 200px;
+}

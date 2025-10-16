@@ -1,0 +1,220 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+main {
+  max-width: 1600px;
+  margin: 100px auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-block-end: 10px;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  gap: 20px;
+}
+
+.important {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.information-container {
+  border: 4px solid lightgrey;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.information-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.nickname {
+  font-size: 1.5rem;
+  margin-block-start: 10px;
+}
+
+.contact-information p {
+  font-size: 1.2rem;
+  margin-block-start: 10px;
+}
+
+.avatar {
+  width: 200px;
+  border-radius: 15px;
+  height: 275px;
+  object-fit: cover;
+}
+
+.education {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  margin-block-end: 40px;
+}
+
+.block-header img {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+  margin-inline-end: 7px;
+}
+
+.education-list {
+  list-style: none;
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 20px;
+}
+
+.education-grade {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-block-end: 7px;
+}
+
+.education-address {
+  font-size: 1.2rem;
+}
+
+.education-date {
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.hobby {
+  grid-column: 2/3;
+  grid-row: 1 / span 2;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.programming {
+  background-image: url(https://media.mstdn.social/media_attachments/files/111/424/584/627/769/067/original/27f26baf7f781726.png);
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.fishing {
+  background-image: url(https://i.pinimg.com/736x/84/ae/f7/84aef7dd6838f55de02269853f810fe6.jpg?nii=t);
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.computer-games {
+  background-image: url(https://avatars.mds.yandex.net/i?id=4c91a38036fd78d3f99c51c9e503ba29_l-5381183-images-thumbs&n=13);
+  grid-column: 2/3;
+  grid-row: 2/4;
+  animation-delay: 2.5s;
+}
+
+.hobby-item {
+  height: 250px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 8px black;
+  text-align: center;
+
+  transform: scale(1) translateY(0);
+  transition: all 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.badge {
+  width: 75px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 15px;
+  text-shadow: none;
+  font-size: 1.1rem;
+}
+
+.badge-green {
+  background-color: green;
+}
+
+.badge-blue {
+  background-color: blue;
+}
+
+@media (width < 1700px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+/* Стили для мобильной версии */
+@media (width < 640px) {
+  .avatar {
+    width: 50px;
+  }
+  .information-grid {
+    grid-template-columns: 1fr;
+  }
+  .hobby {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .hobby-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .programming {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .fishing {
+    grid-column: auto;
+    grid-column: auto;
+  }
+  .computer-games {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}

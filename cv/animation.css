@@ -1,0 +1,72 @@
+.wiggle {
+  animation: wiggle 5s ease infinite;
+}
+.up-down {
+  animation: up-down 10s ease-in infinite;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fade-in-up 1s forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fade-in-left 1s forwards;
+}
+
+@keyframes wiggle {
+  0%,
+  90%,
+  100% {
+    transform: rotate(0);
+  }
+  92% {
+    transform: rotate(-5deg);
+  }
+  94% {
+    transform: rotate(5deg);
+  }
+  96% {
+    transform: rotate(-5deg);
+  }
+  98% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes up-down {
+  0%,
+  90%,
+  100% {
+    transform: translateY(0);
+  }
+  92% {
+    transform: translateY(15px);
+  }
+  94% {
+    transform: translateY(-15px);
+  }
+  96% {
+    transform: translateY(15px);
+  }
+  98% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fade-in-up {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
